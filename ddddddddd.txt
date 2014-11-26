@@ -1,0 +1,22 @@
+Making code changes
+Install the Git client for your operating system, and from your command line run
+
+git clone ssh://54762f7b5973ca583d000053@demo-menation.rhcloud.com/~/git/demo.git/
+cd demo/
+This will create a folder with the source code of your application. After making a change, add, commit, and push your changes.
+
+git add .
+git commit -m 'My changes'
+git push
+When you push changes the OpenShift server will report back its status on deploying your code. The server will run any of your configured deploy hooks and then restart the application.
+=========================
+MySQL 5.5 database added.  Please make note of these credentials:
+
+       Root User: adminHDKzvJR
+   Root Password: Kb-JBpYPlBup
+   Database Name: demo
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
